@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+.play-again{
+    width: 200px;
+    height: 50px;
+    background-color:green;
+    font-size: 20px;
+    font-weight: bold;
+    color: darkorange;
+    border-radius: 25px;
+    border: none;
+    outline: darkorange;
+    position:absolute ;
+    top: 50%;
+    left: 30%;
+    visibility: hidden;
+}
+.exit{
+    width: 200px;
+    height: 50px;
+    background-color: green;
+    color: darkorange;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
+    outline: darkorange;
+    position:absolute ;
+    top: 50%;
+    left: 60%;
+    visibility: hidden;
+}
+.play-again:active {
+	background-color: green;
+	/* box-shadow: 0 5px red; */
+	transform: translateY(4px);
+  }
+  .exit:active {
+	background-color:green;
+	/* box-shadow: 0 5px red; */
+	transform: translateY(4px);
+  }
+.wrapper {
+  text-align: center;
+}
+.gameContainer{
+    background-image: url(bg.png) ;
+    background-repeat:no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+.gameOver{
+    position: absolute;
+    top: 15%;
+	left: 39%;
+    color:green;
+    font-size: 73px;
+    font-weight: bold;
+    text-align: center;
+    visibility: hidden;
+    font-family: sans-serif;
+}
+#score1{
+    position: absolute;
+    top: 35%;
+	left: 45%;
+    color:green;
+    font-size: 53px;
+    font-weight: bold;
+    text-align: center;
+    visibility: hidden;
+    font-family: sans-serif;
+}
+#scoreCont{
+    color: #54212f;
+    font-weight: bold;
+    position: absolute;
+    right: 45px;
+    top: 31px; 
+    padding: 10px;
+    font-family: sans-serif;
+}
+.mario{
+    width: 100px;
+    height: 130px;
+    background-image: url(mario6.png);
+    background-size: cover;
+    position: absolute;
+    bottom:0;
+    left:245px;
+}
+.obstacle{
+    background-image: url(dragon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 130px;
+    position: absolute;
+    bottom:0;
+    left: 72vw;
+}
+.animatemario{
+    animation: mario 0.6s linear;
+
+}
+.obstacleAni{
+    animation: obstacleAni 6s linear infinite;
+}
+@keyframes mario{
+    
+    0%{
+        bottom: 0px;
+    }
+    50%{
+        bottom: 422px;
+    }
+    100%{
+        bottom: 0px;
+    }
+}
+@keyframes obstacleAni{
+    0%{
+       left: 100vw;
+    }
+    100%{
+         left: -10vw;
+    }
+}
